@@ -1,0 +1,85 @@
+.todoList {
+	padding: 0;
+}
+
+.todoListItem {
+	background-color: #f9f9f9;
+	padding: 3px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-color: #101010;
+	border-width: 5px;
+	border: 2px solid #61349f;
+}
+
+.todoForm label {
+	display: flex;
+	align-items: center;
+}
+
+.todoForm input[type='text'] {
+	width: 60%;
+	padding: 5px;
+	border: 2px solid #61349f;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-right: 10px;
+}
+
+.todoForm button {
+	padding: 5px 5px;
+	background-color: #4579a6;
+	color: white;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	border-color: #f4eef7;
+}
+
+.todoForm button:hover {
+	background-color: #0e4069;
+}
+
+.todoText {
+	display: flex;
+	align-items: center;
+}
+
+.todoItemInput {
+	background-color: #f9f9f9;
+	margin-top: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #61349f;
+}
+
+.todoItem {
+	font-size: 15px;
+}
+
+.editTodoButton {
+	width: 110px;
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.saveTodoButton {
+	width: 110px;
+	margin-left: 5px;
+
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.deleteTodoButton {
+	margin-left: 5px;
+	width: 110px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './App.module.css';
-import { todosAPI } from './api/todos.api';
 import {
 	useGetTodos,
 	useAddTodo,
@@ -25,6 +24,10 @@ export const App = () => {
 		setUpdatingTodoText,
 	} = useUpdateTodo(setTodos);
 	const { deleteTodo } = useDeleteTodo(setTodos);
+
+	if (isLoading) {
+		return <div className={styles.loader}></div>;
+	}
 
 	return (
 		<div className={styles.app}>

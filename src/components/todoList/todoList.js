@@ -45,8 +45,9 @@ export const TodoList = ({
 									<input
 										className={styles.todoItemInput}
 										id={id}
+										name="todoItemInput"
 										type="text"
-										// value={updatingTodoText}
+										value={updatingTodoText ?? text}
 										onChange={({ target }) =>
 											setUpdatingTodoText(target.value)
 										}

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { todosEndpoint } from '../api/todos.api';
-import { App } from '../App';
 
 export const useGetTodos = () => {
 	const [todos, setTodos] = useState([]);
@@ -29,7 +28,7 @@ export const useGetTodos = () => {
 };
 
 export const useAddTodo = (setTodos) => {
-	const [newTodoText, setNewTodoText] = useState('');
+	const [newTodoText, setNewTodoText] = useState(null);
 
 	const addTodo = (event) => {
 		event.preventDefault();
@@ -71,8 +70,8 @@ export const useCompletedChange = (setTodos) => {
 };
 
 export const useUpdateTodo = (setTodos) => {
-	const [changingTaskID, setChangingTaskID] = useState('');
-	const [updatingTodoText, setUpdatingTodoText] = useState('');
+	const [changingTaskID, setChangingTaskID] = useState(null);
+	const [updatingTodoText, setUpdatingTodoText] = useState(null);
 
 	const updateTodo = (event) => {
 		event.preventDefault();
@@ -91,7 +90,8 @@ export const useUpdateTodo = (setTodos) => {
 						todo.id === updatedTodo.id ? updatedTodo : todo,
 					),
 				);
-			});
+			})
+			.finally(() => setChangingTaskID(null), setUpdatingTodoText(null));
 	};
 	return {
 		updateTodo,

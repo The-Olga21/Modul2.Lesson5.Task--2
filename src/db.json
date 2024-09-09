@@ -11,9 +11,19 @@
       "completed": false
     },
     {
-      "text": "аврке",
+      "text": "Записаться к врачу",
+      "completed": true,
+      "id": "V2ijGnw"
+    },
+    {
+      "text": "укеуккуе",
       "completed": false,
-      "id": "BKpg50_"
+      "id": "sXQrtlX"
+    },
+    {
+      "text": "пукпукпу",
+      "completed": false,
+      "id": "8I64y6f"
     }
   ]
 }
